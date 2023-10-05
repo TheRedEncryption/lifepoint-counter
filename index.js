@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function submitForm() {
-    alert(startingLPForm.value + " " + endingLPForm.value);
     var aaa = document.createElement("a");
     aaa.innerText = "womp womp";
     aaa.href = "display.html#start=" + startingLPForm.value + "&end=" + endingLPForm.value;
