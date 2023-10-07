@@ -5,36 +5,30 @@
 }
 
 .centerImg {
-    width:75%;
-    height:75%;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #outerContainer{
-    display: block;
-    position: fixed;
-    /* left:25vw;
-    top:15vh; */
-    width:fit-content;
-    height:fit-content;
-    border: solid;
-    border: solid blue;
-    padding: 0%;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    transform: translate(46%, 15%);
 }
 
 #num{
-    border: solid red;
-    position:absolute;
-    font-size: 100vw;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: gold;
     font-style: italic;
-    font-weight: lighter;
-    color: yellow;
+    font-weight: bold;
+    padding: 10px 20px; 
+    font-size: 15vw; 
     text-align: right;
 
-    width:fit-content;
-    height:fit-content;
-    right:100%;
-    padding: 0%;
-    
-
-    transform: translate(100%, -100%)
+    -webkit-text-stroke: 0.015em black;
+    text-shadow: 5px 5px 5px black;
 }
