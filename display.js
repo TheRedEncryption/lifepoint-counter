@@ -4,6 +4,8 @@ var numberDiv;
 var startNum;
 var endNum;
 
+var newNumber;
+
 var diff;
 const numFrames = 120;
 var delta;
@@ -17,22 +19,26 @@ document.addEventListener("DOMContentLoaded", function(){
     startNum = parseInt(hashes[0].substring(6));
     endNum = parseInt(hashes[1].substring(4));
 
+    newNumber = startNum;
+
     numberDiv.innerHTML = startNum;
 
     diff = endNum - startNum;
-    delta = Math.round(diff / numFrames);
+    delta = diff / numFrames;
 
     setTimeout(startAnimating, 5000);
 });
 
 function startAnimating(){
+    // alert(delta);
     if(!done){
         requestAnimationFrame(startAnimating);
     }
-   let newNumber = parseInt(numberDiv.innerHTML) + delta;
+   newNumber += delta;
+   let newDisplayNumber = Math.round(newNumber);
    if(delta < 0){
     if(!(newNumber < endNum)){
-        numberDiv.innerHTML = newNumber;
+        numberDiv.innerHTML = newDisplayNumber;
         console.log("dn");
     }
     else{
@@ -42,7 +48,7 @@ function startAnimating(){
    }
    else if(delta > 0){
     if(!(newNumber > endNum)){
-        numberDiv.innerHTML = newNumber;
+        numberDiv.innerHTML = newDisplayNumber;
         console.log("up");
     }
     else{
