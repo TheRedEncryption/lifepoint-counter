@@ -12,6 +12,10 @@ var delta;
 
 var done = false;
 
+var beepAudio;
+var endAudio;
+
+
 document.addEventListener("DOMContentLoaded", function(){
     hashes = window.location.hash.substring(1).split("&");
     numberDiv = document.getElementById("num");
@@ -26,11 +30,18 @@ document.addEventListener("DOMContentLoaded", function(){
     diff = endNum - startNum;
     delta = diff / numFrames;
 
+    beepAudio = new Audio('./assets/beep_full.wav');
+    beepAudio.loop = true;
+    beepAudio.volume = 0.6;
+
+    endAudio = new Audio('./assets/finish-counting.wav');
+
     setTimeout(startAnimating, 5000);
 });
 
 function startAnimating(){
     // alert(delta);
+    beepAudio.play();
     if(!done){
         requestAnimationFrame(startAnimating);
     }
@@ -44,6 +55,7 @@ function startAnimating(){
     else{
         numberDiv.innerHTML = endNum;
         done = true;
+        beepAudio.loop = false;
     }
    }
    else if(delta > 0){
@@ -54,10 +66,17 @@ function startAnimating(){
     else{
         numberDiv.innerHTML = endNum;
         done = true;
+        beepAudio.loop = false;
     }
    }
    else if(delta == 0){
    console.log("same");
    done = true;
+   beepAudio.loop = false;
+   }
+   if(done){
+    beepAudio.pause();
+    beepAudio.currentTime = 0;
+    endAudio.play();
    }
 }
