@@ -3,17 +3,17 @@ body{
 }
 
 form {
-    border: solid;
+    /* border: solid; */
     display:flex;
     flex-direction: column;
     align-content: flex-start;
 }
 
 #formDiv{
-    padding: 1% 1%;
+    padding: 20vh 1%;
     text-align: center;
     display: flex;
-    height:100vh;
+    /* height:100vh; */
     flex-direction: column;
     border: dashed;
     align-content: center;
@@ -40,7 +40,8 @@ label{
 }
 
 input[type=submit]{
-    display: none;
+    margin:10px;
+    /* width : 50%; */
 }
 
 .centerImg {

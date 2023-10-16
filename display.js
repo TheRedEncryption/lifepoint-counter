@@ -1,8 +1,8 @@
 var hashes;
 var numberDiv;
 
-var startNum;
-var endNum;
+var startNum = 8000;
+var endNum = 0;
 
 var newNumber;
 
