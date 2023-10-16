@@ -1,7 +1,28 @@
+body{
+    margin:0px;
+}
+
+
 #formDiv{
-    margin: auto;
+    padding: 1%;
     text-align: center;
+    display: flex;
+    height:90svh;
+    flex-direction: column;
+    justify-content: space-around;
     border: solid;
+}
+
+input {
+    border-radius: 25px;
+    margin:auto;
+    padding:1%;
+    font-size: 200%;
+    text-align: center;
+}
+
+label{
+    font-size:250%;
 }
 
 .centerImg {
