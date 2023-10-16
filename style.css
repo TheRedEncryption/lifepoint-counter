@@ -2,15 +2,21 @@ body{
     margin:0px;
 }
 
+form {
+    border: solid;
+    display:flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
 
 #formDiv{
-    padding: 1%;
+    padding: 1% 1%;
     text-align: center;
     display: flex;
-    height:90svh;
+    height:100vh;
     flex-direction: column;
-    justify-content: space-around;
-    border: solid;
+    border: dashed;
+    align-content: center;
 }
 
 input {
@@ -21,8 +27,20 @@ input {
     text-align: center;
 }
 
+#submitButton {
+    border-radius: 25px;
+    margin:auto;
+    padding:1%;
+    font-size: 200%;
+    text-align: center;
+}
+
 label{
     font-size:250%;
+}
+
+input[type=submit]{
+    display: none;
 }
 
 .centerImg {
