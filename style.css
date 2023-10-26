@@ -8,6 +8,11 @@ form {
     flex-direction: column;
     align-content: flex-start;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
 
 #formDiv{
     padding: 20vh 1%;
@@ -15,7 +20,7 @@ form {
     display: flex;
     /* height:100vh; */
     flex-direction: column;
-    border: dashed;
+    /* border: dashed; */
     align-content: center;
 }
 
@@ -25,11 +30,12 @@ input {
     padding:1%;
     font-size: 200%;
     text-align: center;
+    border: 0.25rem solid;
+    font-style:italic;
 }
 
 #submitButton {
     border-radius: 25px;
-    margin:auto;
     padding:1%;
     font-size: 200%;
     text-align: center;
